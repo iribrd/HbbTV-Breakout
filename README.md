@@ -1,4 +1,4 @@
-Breakout
+HbbTV Breakout
 ========
 
 Another HTML5 experiment to implement BREAKOUT in a `<canvas>`
