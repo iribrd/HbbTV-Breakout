@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>Javascript Breakout</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width", initial-scale=1.0, user-scalable="no"/>
+  <link href="breakout.css" media="screen, print" rel="stylesheet" type="text/css" /> 
+</head> 
+ 
+<body> 
+
+
+  <div id="breakout">
+    <canvas id="canvas">
+      <div class='unsupported'>
+       متاسفانه امکان نمایش وجود ندارد،چون سیستم شما از  &lt;canvas&gt; حمایت نمیکند.
+      </div>
+    </canvas>
+    <div id="levels">
+      <img id="next" class="disabled" src="images/up.png"   title="next level">
+      <img id="prev" class="disabled" src="images/down.png" title="previous level">
+      <span id="label">مرحله:</span><span id="level"></span>
+    </div>
+    <div id="controls">
+      <input id='sound' type='checkbox' />
+      
+    </div>
+    <div id="instructions" style='display:none;'>
+      <div class='keyboard'>
+        کنید<b> ok</b> برای شروع<br>
+        با <b>چپ/راست</b> حرکت دهید<br>
+        با <b>بالا/پایین</b> مراحل را تغییر دهید 
+      </div>
+      <div class='touch'>
+        <b>touch here</b> to start<br>
+        <b>drag</b> paddle to move<br>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+  <script src="breakout.js"></script>
+  <script src="levels.js"></script>
+  <script>
+  Game.ready(function() {
+    var game = Game.start('canvas', Breakout);
+  });
+  </script>
+
+</body> 
+</html>
